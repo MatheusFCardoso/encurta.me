@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>encurta.me</title>
+
+    <!-- Incluindo os arquivos CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Estilo personalizado -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .jumbotron {
+            background-color: #007bff;
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .btn-shorten {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        .shortened-url {
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Jumbotron/header -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">encurta.me</h1>
+            <p class="lead">Encurte seus links de forma fácil e rápida!</p>
+        </div>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <!-- Formulário de encurtamento de link -->
+                <form form action="/" method="POST" id="shorten-form">
+                    <div class="input-group mb-3">
+                        <input name="url" type="url" class="form-control" id="urlInput" placeholder="Cole seu link aqui" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-shorten" type="submit">Encurtar</button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Resultado do encurtamento -->
+                <div id="shortenedResult" class="alert alert-success d-none">
+                    Seu link encurtado:
+                    <br>
+                    <span class="shortened-url" id="shortenedURL"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Incluindo os scripts do Bootstrap e jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Seu script personalizado para o encurtamento de link -->
+    <script>
+        // Adicione aqui o seu script de encurtamento de link utilizando JavaScript/jQuery
+    </script>
+
+</body>
+
+</html>

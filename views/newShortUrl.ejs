@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>encurta.me</title>
+
+  <!-- Incluindo os arquivos CSS do Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body class="bg-light">
+
+  <div class="container">
+    <div class="row align-items-center vh-100">
+      <div class="col-6 mx-auto">
+        <div class="card shadow border">
+          <div class="card-body d-flex flex-column align-items-center">
+
+            <!-- Adicione o input da URL aqui -->
+            <div class="input-group mb-3">
+              <input type="text" id="shortUrl" class="form-control" value="<%= newShortUrl.urlShort %>" readonly>
+              <div class="input-group-append">
+                <button class="btn btn-primary" onclick="copyShortUrl()">Copiar</button>
+              </div>
+            </div>
+
+            <!-- Função para copiar a URL -->
+            <script>
+              function copyShortUrl() {
+                const shortUrl = document.getElementById('shortUrl');
+                const code = shortUrl.value;
+                const href = window.location.href
+                const fullUrl = href + shortUrl.value
+                shortUrl.value = fullUrl
+                shortUrl.select();
+                document.execCommand('copy');
+                shortUrl.value = code;
+                alert('Texto copiado: ' + fullUrl);
+              }
+            </script>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Incluindo os scripts do Bootstrap e jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
