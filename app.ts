@@ -40,8 +40,8 @@ class App {
         useUnifiedTopology: true,
       } as ConnectOptions)
       .then(() => {
-        console.log('\nconectado com a base de dados');
-        this.app.emit('pronto');
+        console.log('\n ✅ Conectado com a base de dados !!');
+        this.app.emit('pronto !!');
       })
       .catch((err) => console.log(err));
     }
