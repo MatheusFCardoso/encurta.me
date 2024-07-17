@@ -3,7 +3,7 @@ version: '3.8'
 services:
   app:
     build: .
-    image: encurta.me-app
+    # image: encurta.me-app
     container_name: app-encurtame
     env_file:
       - .env
